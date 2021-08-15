@@ -1,6 +1,9 @@
-CREATE USER 'powerstation'@'localhost' IDENTIFIED BY 'powerstation';
+# create user with from all host
+CREATE USER 'poweruser'@'' IDENTIFIED BY 'poweruser';
 
 # To assign global privileges, use ON *.* syntax:
-GRANT ALL PRIVILEGES ON * . * TO 'powerstation'@'localhost';
+GRANT ALL PRIVILEGES ON * . * TO 'poweruser'@'';
 
-ALTER USER 'powerstation'@'localhost' IDENTIFIED WITH mysql_native_password BY 'powerstation';
+ALTER USER 'poweruser'@'' IDENTIFIED WITH mysql_native_password BY 'poweruser';
+
+SELECT User, Host FROM mysql.user;
