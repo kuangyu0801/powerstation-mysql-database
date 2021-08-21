@@ -9,5 +9,5 @@ COPY .my.cnf /root/
 # MySQL will automaticall execute scripts at init stage
 COPY create-user.sql /docker-entrypoint-initdb.d/
 COPY create-db-table.sql /docker-entrypoint-initdb.d/
-
-# docker run -d --network power-net --network-alias mysql mysql/mysql-server:latest
+# docker build -t kuangyu0801/powerstation-mysql-database .
+# docker run -d --network power-net --network-alias mysql kuangyu0801/powerstation-mysql-database
